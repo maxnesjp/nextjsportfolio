@@ -67,7 +67,7 @@ const CertificationCard = ({
             }`}
             onClick={() => handleImageClick(index)}
           >
-            <div className="relative group">
+            <div className="relative group flex justify-center items-center sm:mx-3">
               <Image
                 src={url}
                 alt={`${title} ${index}`}
@@ -83,7 +83,7 @@ const CertificationCard = ({
                 </div>
               )}
               <motion.div
-                className="absolute bottom-3 left-3 text-gray-900 text-2xl"
+                className="absolute bottom-3 text-gray-900 text-2xl"
                 animate={{
                   scale: [1, 1.1, 1],
                   opacity: [1, 0.8, 1],

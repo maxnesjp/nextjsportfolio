@@ -4,9 +4,11 @@ import React, { useEffect } from "react";
 import Heading from "./heading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import tailwindConfig from "@/tailwind.config";
 
 const Experience = () => {
   const { ref } = useSectionInView("Experience", 0.3);
+  const isSmallScreen = window.innerWidth <= 640;
 
   return (
     <section
@@ -26,11 +28,11 @@ const Experience = () => {
             } w-full`}
             initial={{
               opacity: 0,
-              x: index % 2 == 0 ? 100 : -100,
+              x: isSmallScreen ? 0 : index % 2 === 0 ? 100 : -100,
             }}
             whileInView={{
               opacity: 1,
-              x: index % 2 == 0 ? -100 : 100,
+              x: 0,
             }}
             transition={{
               duration: 0.4,
