@@ -27,7 +27,7 @@ const ReactEmail = ({ message, sender }: ContactFormEmailProps) => {
               </Heading>
               <Text>{message}</Text>
               <Hr />
-              <Text>The sender's email is: {sender}</Text>
+              <Text>The sender&apos;s email is: {sender}</Text>
             </Section>
           </Container>
         </Body>
