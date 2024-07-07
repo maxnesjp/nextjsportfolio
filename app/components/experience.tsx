@@ -1,14 +1,22 @@
 "use client";
 import { experiencesData } from "@/lib/data";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Heading from "./heading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-import tailwindConfig from "@/tailwind.config";
 
 const Experience = () => {
   const { ref } = useSectionInView("Experience", 0.3);
-  const isSmallScreen = window.innerWidth <= 640;
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkWindowSize = () => {
+      setIsSmallScreen(window.innerWidth <= 640);
+    };
+    checkWindowSize();
+    window.addEventListener("resize", checkWindowSize);
+    return () => window.removeEventListener("resize", checkWindowSize);
+  }, []);
 
   return (
     <section
