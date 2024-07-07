@@ -22,8 +22,8 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Projects",
-    hash: "#projects",
+    name: "Certifications",
+    hash: "#certifications",
   },
   {
     name: "Skills",
@@ -39,36 +39,54 @@ export const links = [
   },
 ] as const;
 
+const getYearsAndMonthsSince = (() => {
+  const startDate = new Date("2022-05-01"), currentDate = new Date();
+  return `${currentDate.getFullYear() - startDate.getFullYear() - (currentDate.getMonth() < startDate.getMonth() ? 1 : 0)} y. ${(currentDate.getMonth() + 12 - startDate.getMonth()) % 12 + 1} m.`;
+})();
+
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Software Engineer Engineer",
+    company: "Vialto Partners 税理士法人",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Currently, I am engaged in full-stack development, primarily focusing on .NET for the back-end and React.js, Next.js, and TypeScript for the front-end. The primary objective of the web application is to create, manage, and submit Japan tax returns and related deliverables to the Japanese tax authorities. The back-end extensively employs tax calculation logic, which we update annually. Additionally, the application includes several streamlined functionalities such as PDF to XML and XML to PDF conversions for document interpretation and submission, automatic error detection in XML files to be sent to the tax authorities, and features for resending or force-sending documents as needed.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    location: "Tokyo, Japan",
+    date: `05.2022 - present (${getYearsAndMonthsSince})` ,
   },
+  {
+    title: "Graduation",
+    company: "Temple University",
+    description:
+      "Completed 4-year double degree in 2.5 years with GPA of 3.83/4.00 at an american university.",
+    icon: React.createElement(LuGraduationCap),
+    location: "Tokyo, Japan",
+    date: "09.2019 - 05.2022",
+  },
+  {
+    title: "Software Engineer Intern",
+    company: "PwC 税理士法人",
+    description:
+      "Worked on the back-end part of the application, using .NET to create supporting custom logic for tax return preparation.",
+    icon: React.createElement(CgWorkAlt),
+    location: "Tokyo, Japan",
+    date: "01.2022 - 04.2022",
+  },
+  {
+    title: "Software Engineer Intern",
+    company: "rinna Co. Ltd",
+    description:
+      "Joined rinna Co. Ltd, an AI company specializing in chat bots, where I put my university gained IT knowledge as well skills learned from courses and other materials online into professional practice. As an intern, I helped building a web based full stack application in .NET MVC",
+    icon: React.createElement(LuGraduationCap),
+    location: "Tokyo, Japan",
+    date: "08.2021 - 10.2021",
+  },
+  
 ] as const;
 export const certificationData = [
   {
     title: "Codecademy courses",
-    description: "Back-End Career Path: 100h with examination. Other courses are related to improving my skills in Java.",
+    description: "I've successfully completed a demanding 'Back-End Career Path' course, investing over 100 hours to earn certification through an examination. I've also pursued courses aimed at honing my skills in Java.",
     tags: ["Node.js", "Express.js", "SQL", "PostgreSQL", "Java",  "JUnit", "Servlets", "Java Native Interface (JNI)", "Sockets", "Java Database Connectivity (JDBC)", "Spring Controllers", "Spring Framework", "JPA", "Data Structures in Java"] as const,
     imageUrl: [
       "/codecademy_back_end_certificate.png",
@@ -86,19 +104,19 @@ export const certificationData = [
     ] as const
   },
   {
-    title: "Coursera",
-    description: "",
-    tags: [] as const,
+    title: "Temple University",
+    description: "Alongside my computer science degree, I achieved the 'Fundamentals of Programming' certification by successfully completing all available computer science courses offered at my university during that period.",
+    tags: ["Python", "C", "Java", "SQL", "Data Structures in Java", "Low-level programming"] as const,
     imageUrl: [
-      "/coursera_google_certificate.png"],
-    proofpath: [
-      "https://www.coursera.org/account/accomplishments/verify/MAW3TSLHDDEV?utm_campaign=sharing_cta&utm_content=cert_image&utm_medium=certificate&utm_product=course&utm_source=link",
+      "/temple_uni_FoB_certificate.png",
     ] as const,
+    proofpath: [
+      "https://www.parchment.com/u/award/c3fe6312988083feeb2db7ff97b7baef"]
   },
   {
     title: "LinkedIn",
-    description: "Since I had enough hands-on practice with C#, I decided to get certified to prove my knowledge.",
-    tags: ["C#", "Data Structures in C#"] as const,
+    description: "I completed the C# Algorithms course, which focused on efficient algorithm design in C#. The course covered essential algorithms for strings, arrays, linked lists, queues, stacks, hash-based structures, and trees, emphasizing creating custom solutions using built-in C# functionalities.",
+    tags: ["C#", "Efficient Algorithm Design", "Data Assumptions", "Handling Various Data Structures in C#", "Custom Algorithm Creation"] as const,
     imageUrl: [
       "/linkedin_csharp_certificate.png"],
     proofpath: [
@@ -106,13 +124,13 @@ export const certificationData = [
     ] as const,
   },
   {
-    title: "Temple University",
-    description: "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["Python", "C", "Java", "SQL", "Data Structures in Java", "Low-level programming"] as const,
+    title: "Coursera",
+    description: "I completed the Google IT Support Professional Certificate, gaining essential skills for entry-level IT roles in computer assembly, networking, troubleshooting, and more.",
+    tags: ["Customer Service", "Network Protocols", "Cloud Computing", "Encryption Techniques", "Debugging", "Computer Assembly", "Wireless Networking", "Program Installation", "Systems Knowledge (Linux, DNS, CLI)"] as const,
     imageUrl: [
-      "/temple_uni_FoB_certificate.png",
-    ] as const,
+      "/coursera_google_certificate.png"],
     proofpath: [
-      "https://www.parchment.com/u/award/c3fe6312988083feeb2db7ff97b7baef"]
+      "https://www.coursera.org/account/accomplishments/verify/MAW3TSLHDDEV?utm_campaign=sharing_cta&utm_content=cert_image&utm_medium=certificate&utm_product=course&utm_source=link",
+    ] as const,
   },
 ] as const;
