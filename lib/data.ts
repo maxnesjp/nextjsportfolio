@@ -60,7 +60,7 @@ export const experiencesData = [
     title: "Software Engineer Intern",
     company: "PwC 税理士法人",
     description:
-      "Worked on the back-end part of the application, using .NET to create supporting custom logic for tax return preparation.",
+      "I specialized in back-end development, using .NET to develop specialized logic for tax return preparation within the application.",
     icon: React.createElement(CgWorkAlt),
     location: "Tokyo, Japan",
     date: "01.2022 - 04.2022",
@@ -69,7 +69,7 @@ export const experiencesData = [
     title: "Software Engineer Intern",
     company: "rinna Co. Ltd",
     description:
-      "Joined rinna Co. Ltd, an AI company specializing in chat bots, where I put my university gained IT knowledge as well skills learned from courses and other materials online into professional practice. As an intern, I helped building a web based full stack application in .NET MVC",
+      "I developed a chatbot within a .NET MVC application that utilized internal API endpoints, enabling real-time interactions with an AI-trained robot. This project involved integrating advanced AI capabilities into the chatbot, ensuring responsive and engaging user interactions.",
       icon: React.createElement(CgWorkAlt),
     location: "Tokyo, Japan",
     date: "08.2021 - 10.2021",
