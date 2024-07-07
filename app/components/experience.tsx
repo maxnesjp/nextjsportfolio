@@ -2,18 +2,11 @@
 import { experiencesData } from "@/lib/data";
 import React, { useEffect } from "react";
 import Heading from "./heading";
-import { useActiveSectionContext } from "./context/activeSection";
-import { useInView } from "react-intersection-observer";
+import { useSectionInView } from "@/lib/hooks";
+import { motion } from "framer-motion";
 
 const Experience = () => {
-  const { ref, inView } = useInView({ threshold: 0.5 });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Experience");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView("Experience", 0.3);
 
   return (
     <section
@@ -24,13 +17,24 @@ const Experience = () => {
       <Heading title="Experience" />
       <div>
         {experiencesData.map((item, index) => (
-          <div
+          <motion.div
             key={index}
             className={`py-6 sm:py-10 flex flex-col sm:flex-row gap-2 ${
               index != experiencesData.length - 1 && "border-b-2"
             } ${
               index % 2 === 0 ? "sm:flex-row-reverse" : "sm:flex-row"
             } w-full`}
+            initial={{
+              opacity: 0,
+              x: index % 2 == 0 ? 100 : -100,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: index % 2 == 0 ? -100 : 100,
+            }}
+            transition={{
+              duration: 0.4,
+            }}
           >
             <div
               className={`text-left w-full sm:w-1/2 flex flex-col gap-1 ${
@@ -47,7 +51,7 @@ const Experience = () => {
               <p>{item.description}</p>
               <p>{item.location}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

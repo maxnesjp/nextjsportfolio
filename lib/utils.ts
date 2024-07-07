@@ -8,6 +8,10 @@ export const validateString = (
 
   return true;
 };
+export const validateEmailFormat = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
 
 export const getErrorMessage = (error: unknown): string => {
   let message: string;

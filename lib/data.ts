@@ -147,9 +147,9 @@ export const skills = [
   "Spring Controllers",
   "JPA",
   "Java Database Connectivity (JDBC)",
-  "Servlets",
+  "Java Servlets",
   "Java Native Interface (JNI)",
-  "Sockets",
+  "Java Sockets",
   "JUnit",
   "Spring Framework"
 ] as const;
