@@ -10,7 +10,7 @@ export default function Certifications() {
 
   return (
     <section
-      className="mb-20 max-w-[45rem] text-center leading-8 sm:mb-20 scroll-m-28"
+      className="mb-20 max-w-[45rem] text-center leading-8 scroll-m-28"
       id="certifications"
       ref={ref}
     >

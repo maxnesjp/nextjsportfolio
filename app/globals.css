@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Add this to your global CSS file or a custom CSS file */
+.vertical-timeline-element-icon.is-hidden {
+    display: block !important;
+  }

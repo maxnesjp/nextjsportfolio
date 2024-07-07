@@ -17,7 +17,7 @@ const Experience = () => {
 
   return (
     <section
-      className="sm:pb-40 w-full max-w-6xl text-center leading-8 scroll-m-28 mx-auto"
+      className="mb-20 w-full max-w-6xl text-center leading-8 scroll-m-28 mx-auto"
       id="experience"
       ref={ref}
     >
@@ -26,7 +26,9 @@ const Experience = () => {
         {experiencesData.map((item, index) => (
           <div
             key={index}
-            className={`py-6 sm:py-10 flex flex-col sm:flex-row gap-2 border-b-2 ${
+            className={`py-6 sm:py-10 flex flex-col sm:flex-row gap-2 ${
+              index != experiencesData.length - 1 && "border-b-2"
+            } ${
               index % 2 === 0 ? "sm:flex-row-reverse" : "sm:flex-row"
             } w-full`}
           >

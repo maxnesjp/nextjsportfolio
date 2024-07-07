@@ -2,13 +2,6 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import back_end from "@/public/codecademy_back_end_certificate.png";
-import interm_java from "@/public/codecademy_intermediate_java_certificate.png";
-import advanced_java from "@/public/codecademy_advanced_java_certificate.png";
-import data_structures_java from "@/public/codecademy_data_structures_java_certificate.png";
-import spring_java from "@/public/codecademy_spring_java_certificate.png";
-import temple_fop from "@/public/temple_uni_FoB_certificate.png";
-import { cert_data } from "./types";
 
 
 
@@ -50,7 +43,7 @@ export const experiencesData = [
     company: "Vialto Partners 税理士法人",
     description:
       "Currently, I am engaged in full-stack development, primarily focusing on .NET for the back-end and React.js, Next.js, and TypeScript for the front-end. The primary objective of the web application is to create, manage, and submit Japan tax returns and related deliverables to the Japanese tax authorities. The back-end extensively employs tax calculation logic, which we update annually. Additionally, the application includes several streamlined functionalities such as PDF to XML and XML to PDF conversions for document interpretation and submission, automatic error detection in XML files to be sent to the tax authorities, and features for resending or force-sending documents as needed.",
-    icon: React.createElement(FaReact),
+      icon: React.createElement(CgWorkAlt),
     location: "Tokyo, Japan",
     date: `05.2022 - present (${getYearsAndMonthsSince})` ,
   },
@@ -77,7 +70,7 @@ export const experiencesData = [
     company: "rinna Co. Ltd",
     description:
       "Joined rinna Co. Ltd, an AI company specializing in chat bots, where I put my university gained IT knowledge as well skills learned from courses and other materials online into professional practice. As an intern, I helped building a web based full stack application in .NET MVC",
-    icon: React.createElement(LuGraduationCap),
+      icon: React.createElement(CgWorkAlt),
     location: "Tokyo, Japan",
     date: "08.2021 - 10.2021",
   },
@@ -133,4 +126,30 @@ export const certificationData = [
       "https://www.coursera.org/account/accomplishments/verify/MAW3TSLHDDEV?utm_campaign=sharing_cta&utm_content=cert_image&utm_medium=certificate&utm_product=course&utm_source=link",
     ] as const,
   },
+] as const;
+
+
+export const skills = [
+  ".NET (C#)",
+  "JavaScript",
+  "Node.js",
+  "React.js",
+  "Next.js",
+  "Tailwind CSS",
+  "OutSystems",
+  "Azure DevOps",
+  "Azure App Service",
+  "Azure Key Vault",
+  "Azure SQL Database",
+  "SQL Server Management Studio (SSMS)",
+  "Database migration",
+  "Java",
+  "Spring Controllers",
+  "JPA",
+  "Java Database Connectivity (JDBC)",
+  "Servlets",
+  "Java Native Interface (JNI)",
+  "Sockets",
+  "JUnit",
+  "Spring Framework"
 ] as const;
