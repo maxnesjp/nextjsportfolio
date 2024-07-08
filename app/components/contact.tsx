@@ -58,7 +58,9 @@ const Contact = () => {
           maxLength={300}
           placeholder="Your message"
         />
-        <ContactButton />
+        <div className="flex justify-center sm:justify-start items-center">
+          <ContactButton />
+        </div>
       </form>
     </motion.section>
   );

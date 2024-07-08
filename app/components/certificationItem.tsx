@@ -35,7 +35,7 @@ const CertificationCard = ({
       style={{ scale: scaleProgress, opacity: opacityProgress }}
       className="group w-full flex flex-col sm:flex-row border-[0.1rem] bg-gray-100 border-gray-300 p-2 rounded-lg shadow-lg hover:bg-gray-700 hover:text-gray-100 transition relative"
     >
-      <div className="w-full sm:w-7/12 text-left p-4 relative h-max sm:h-[400px]">
+      <div className="w-full sm:w-7/12 text-left p-4 relative h-max sm:h-[425px]">
         <h2 className="font-medium text-xl mb-2">{title}</h2>
         <p className="mb-4">{description}</p>
         <div className="mb-4 flex flex-wrap gap-2 sm:absolute sm:bottom-0">
