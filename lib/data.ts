@@ -51,7 +51,7 @@ export const experiencesData = [
     title: "Graduation",
     company: "Temple University",
     description:
-      "Completed 4-year double degree in 2.5 years with GPA of 3.83/4.00 at an american university.",
+      "Completed 4-year double degree in 2.5 years with GPA of 3.84/4.00 at an american university.",
     icon: React.createElement(LuGraduationCap),
     location: "Tokyo, Japan",
     date: "09.2019 - 05.2022",
