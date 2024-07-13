@@ -12,12 +12,10 @@ export default function Home() {
       <Intro />
       <SectionDivider />
       <About />
+      <Experience />
+      <Skills />
       <SectionDivider />
       <Certifications />
-      <SectionDivider />
-      <Experience />
-      <SectionDivider />
-      <Skills />
       <Contact />
     </main>
   );
